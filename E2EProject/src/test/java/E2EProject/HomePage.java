@@ -17,7 +17,7 @@ public class HomePage extends BrowseOpen
 	public void pageinvok() throws IOException {
 		
 		//comment
-		
+		//comment2
 		open();
 		DOMConfigurator.configure("Log4.xml");
 		logger.info("Browser open");
