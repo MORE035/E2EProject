@@ -2,34 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-02T10:58:39 IST" name="Default suite" finished-at="2022-02-02T10:59:09 IST" duration-ms="30171">
+  <suite started-at="2022-02-04T09:11:48 IST" name="Default suite" finished-at="2022-02-04T09:14:36 IST" duration-ms="168157">
     <groups>
     </groups>
-    <test started-at="2022-02-02T10:58:39 IST" name="Default test" finished-at="2022-02-02T10:59:09 IST" duration-ms="30171">
+    <test started-at="2022-02-04T09:11:48 IST" name="Default test" finished-at="2022-02-04T09:14:36 IST" duration-ms="168157">
       <class name="E2EProject.HomePage">
-        <test-method signature="pageinvok()[pri:0, instance:E2EProject.HomePage@52af26ee]" started-at="2022-02-02T10:58:39 IST" name="pageinvok" finished-at="2022-02-02T10:59:09 IST" duration-ms="30094" status="FAIL">
+        <test-method is-config="true" signature="open()[pri:0, instance:E2EProject.HomePage@48aca48b]" started-at="2022-02-04T09:11:48 IST" name="open" finished-at="2022-02-04T09:11:57 IST" duration-ms="8940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- open -->
+        <test-method signature="pageinvok()[pri:0, instance:E2EProject.HomePage@48aca48b]" started-at="2022-02-04T09:11:57 IST" name="pageinvok" finished-at="2022-02-04T09:14:32 IST" duration-ms="154885" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class="ui-datepicker-next ui-corner-all"]/span"}
-  (Session info: chrome=97.0.4692.99)
+  (Session info: chrome=98.0.4758.82)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.0.0', revision: '3a21814679'
 System info: host: 'DESKTOP-GRE8QJG', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [662a78b9e98dc3577b59479812dac0ab, findElement {using=xpath, value=//a[@class="ui-datepicker-next ui-corner-all"]/span}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SPURGE\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:57553}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57553/devtoo..., se:cdpVersion: 97.0.4692.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 662a78b9e98dc3577b59479812dac0ab]]>
+Command: [e9b77d8ad9fa324ebee442930751d529, findElement {using=xpath, value=//a[@class="ui-datepicker-next ui-corner-all"]/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SPURGE\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50303}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50303/devtoo..., se:cdpVersion: 98.0.4758.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e9b77d8ad9fa324ebee442930751d529]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class="ui-datepicker-next ui-corner-all"]/span"}
-  (Session info: chrome=97.0.4692.99)
+  (Session info: chrome=98.0.4758.82)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.0.0', revision: '3a21814679'
 System info: host: 'DESKTOP-GRE8QJG', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [662a78b9e98dc3577b59479812dac0ab, findElement {using=xpath, value=//a[@class="ui-datepicker-next ui-corner-all"]/span}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SPURGE\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:57553}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57553/devtoo..., se:cdpVersion: 97.0.4692.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 662a78b9e98dc3577b59479812dac0ab
+Command: [e9b77d8ad9fa324ebee442930751d529, findElement {using=xpath, value=//a[@class="ui-datepicker-next ui-corner-all"]/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\SPURGE\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50303}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50303/devtoo..., se:cdpVersion: 98.0.4758.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e9b77d8ad9fa324ebee442930751d529
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -48,9 +52,9 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-at pageobjects.LandingPage.Login(LandingPage.java:60)
-at E2EProject.HomePage.pageinvok(HomePage.java:23)
+at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+at pageobjects.LandingPage.Login(LandingPage.java:62)
+at E2EProject.HomePage.pageinvok(HomePage.java:29)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -85,6 +89,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageinvok -->
+        <test-method is-config="true" signature="close()[pri:0, instance:E2EProject.HomePage@48aca48b]" started-at="2022-02-04T09:14:32 IST" name="close" finished-at="2022-02-04T09:14:36 IST" duration-ms="4182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
       </class> <!-- E2EProject.HomePage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

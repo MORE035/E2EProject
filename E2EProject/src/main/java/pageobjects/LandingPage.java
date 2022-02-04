@@ -43,7 +43,7 @@ public class LandingPage extends BrowseOpen {
 		Leaving.clear();
 		Leaving.sendKeys(Source);
 		for (int i = 0; i < listofL.size(); i++) {
-			if(listofL.contains(Source)) {
+			if(listofL.equals(Source)) {
 			listofL.get(i).click();
 		}}
 		Going.clear();
@@ -56,10 +56,12 @@ public class LandingPage extends BrowseOpen {
 		}}
 		DOJ.click();
 		String seleniumMonth = month.getText();
-		while(!seleniumMonth.contains(Month)) {
+		System.out.println(seleniumMonth);
+
+		while(seleniumMonth!=(Month)) {
 			Next.click();
 			seleniumMonth = month.getText();
-			
+			System.out.println("selenium generated month   "+seleniumMonth);
 		}
 	}
 

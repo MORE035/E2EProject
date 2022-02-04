@@ -5,6 +5,8 @@
     <classes>
       <class name="E2EProject.HomePage">
         <methods>
+          <include name="close"/>
+          <include name="open"/>
           <include name="pageinvok"/>
         </methods>
       </class> <!-- E2EProject.HomePage -->

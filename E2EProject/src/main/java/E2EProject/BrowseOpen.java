@@ -12,14 +12,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
+
 public class BrowseOpen {
 	public WebDriver driver;
 	File file = new File("C:\\Users\\SPURGE\\eclipse-workspace\\E2EProject\\src\\main\\java\\E2EProject\\InitialSetUp");
 
 	Properties prop = new Properties();
 
-	
-	public WebDriver open() throws IOException {
+	@BeforeTest
+	public void open() throws IOException {
 
 		FileInputStream fi = new FileInputStream(file);
 
@@ -49,11 +50,10 @@ public class BrowseOpen {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(url);
 	
-		return driver;
 	}
-	public WebDriver close() {
+	@AfterTest
+	public void  close() {
 		driver.close();
-		return driver;
 	}
 	
 }
