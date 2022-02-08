@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-07T21:03:44 IST" name="Default suite" finished-at="2022-02-07T21:05:07 IST" duration-ms="83487">
+  <suite started-at="2022-02-08T08:26:28 IST" name="Default suite" finished-at="2022-02-08T08:27:47 IST" duration-ms="79637">
     <groups>
     </groups>
-    <test started-at="2022-02-07T21:03:44 IST" name="Default test" finished-at="2022-02-07T21:05:07 IST" duration-ms="83487">
+    <test started-at="2022-02-08T08:26:28 IST" name="Default test" finished-at="2022-02-08T08:27:47 IST" duration-ms="79637">
       <class name="E2EProject.HomePage">
-        <test-method is-config="true" signature="startup()[pri:0, instance:E2EProject.HomePage@60bd273d]" started-at="2022-02-07T21:03:43 IST" name="startup" finished-at="2022-02-07T21:03:44 IST" duration-ms="564" status="PASS">
+        <test-method is-config="true" signature="startup()[pri:0, instance:E2EProject.HomePage@60bd273d]" started-at="2022-02-08T08:26:27 IST" name="startup" finished-at="2022-02-08T08:26:28 IST" duration-ms="484" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startup -->
-        <test-method is-config="true" signature="open()[pri:0, instance:E2EProject.HomePage@60bd273d]" started-at="2022-02-07T21:03:44 IST" name="open" finished-at="2022-02-07T21:04:34 IST" duration-ms="50177" status="PASS">
+        <test-method is-config="true" signature="open()[pri:0, instance:E2EProject.HomePage@60bd273d]" started-at="2022-02-08T08:26:28 IST" name="open" finished-at="2022-02-08T08:27:16 IST" duration-ms="47734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- open -->
-        <test-method signature="pageinvok()[pri:0, instance:E2EProject.HomePage@60bd273d]" started-at="2022-02-07T21:04:34 IST" name="pageinvok" finished-at="2022-02-07T21:05:03 IST" duration-ms="28874" status="PASS">
+        <test-method signature="pageinvok()[pri:0, instance:E2EProject.HomePage@60bd273d]" started-at="2022-02-08T08:27:16 IST" name="pageinvok" finished-at="2022-02-08T08:27:43 IST" duration-ms="27559" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageinvok -->
-        <test-method is-config="true" signature="close()[pri:0, instance:E2EProject.HomePage@60bd273d]" started-at="2022-02-07T21:05:03 IST" name="close" finished-at="2022-02-07T21:05:07 IST" duration-ms="4380" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:E2EProject.HomePage@60bd273d]" started-at="2022-02-08T08:27:43 IST" name="close" finished-at="2022-02-08T08:27:47 IST" duration-ms="4291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method is-config="true" signature="flashout()[pri:0, instance:E2EProject.HomePage@60bd273d]" started-at="2022-02-07T21:05:07 IST" name="flashout" finished-at="2022-02-07T21:05:08 IST" duration-ms="503" status="PASS">
+        <test-method is-config="true" signature="flashout()[pri:0, instance:E2EProject.HomePage@60bd273d]" started-at="2022-02-08T08:27:47 IST" name="flashout" finished-at="2022-02-08T08:27:48 IST" duration-ms="574" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flashout -->

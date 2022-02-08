@@ -36,7 +36,7 @@ public class LandingPage extends BrowseOpen {
 	List<WebElement> trElements;
 	@FindBy(tagName="td")
 	List<WebElement> tdElements;
-	@FindBy(xpath = "//*[@onclick='javascript:validateSearch();']")
+	@FindBy(linkText   ="Search")
 	WebElement search;
 
 	public LandingPage(WebDriver driver) {
@@ -79,13 +79,19 @@ public class LandingPage extends BrowseOpen {
 				if (seleniumdate.contains(date)) {
 					tdElements.get(j).click();
 					break;
+				
+				}
+				if (seleniumdate.contains(date)) {
+					break;
 				}
 			}
-			
+				
 		}
 	//--------------------------------------------------------------------
 	//-----------search code-------------------------
 		search.click();
+		//----------verification point----------------------
+		
 		
 }
 
