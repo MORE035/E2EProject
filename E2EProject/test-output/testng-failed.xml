@@ -7,7 +7,9 @@
         <methods>
           <include name="close"/>
           <include name="open"/>
+          <include name="flashout"/>
           <include name="pageinvok"/>
+          <include name="startup"/>
         </methods>
       </class> <!-- E2EProject.HomePage -->
     </classes>
