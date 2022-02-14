@@ -3,9 +3,13 @@ package E2EProject;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -20,19 +24,28 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 
 public class BrowseOpen {
-	public WebDriver driver;
+	public static WebDriver driver;
 	File file = new File("C:\\Users\\SPURGE\\eclipse-workspace\\E2EProject\\src\\main\\java\\E2EProject\\InitialSetUp");
 
 	Properties prop = new Properties();
 	public  ExtentReports extent;
 	public ExtentSparkReporter htmlReporter;
+	
 	@BeforeSuite
 	public void startup() {
-		  htmlReporter = new ExtentSparkReporter("extent.html");
 		    
 	        // create ExtentReports and attach reporter(s)
+		Date dd=new Date();
+	String cdate = dd.toString().replace(" ","_").replace(":", "_");
+
+	
+		  htmlReporter = new ExtentSparkReporter(".//extentreportByavastak//"+cdate+".html");
+
 	         extent = new ExtentReports();
 	        extent.attachReporter(htmlReporter);
+	        htmlReporter.config().setReportName("Automation Results");
+	        htmlReporter.config().setDocumentTitle("Test Results");
+	        extent.setSystemInfo("Tester", "Vasanth");
 		
 	}
 	@AfterSuite
@@ -57,7 +70,6 @@ public class BrowseOpen {
 		if (BName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 			driver = new ChromeDriver();
-
 		} else if (BName.equals("firefox")) {
 			System.setProperty("webdriver.firefox.driver", "Browsers/geckodriver.exe");
 			driver = new FirefoxDriver();
@@ -76,7 +88,19 @@ public class BrowseOpen {
 	}
 	@AfterTest
 	public void  close() {
-		driver.close();
+		driver.quit();
 	}
+	
+	
+	
+	public void getscreenshot(String testMethodName,WebDriver driver) throws IOException {
+		
+		TakesScreenshot ts=(TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destinationFile = System.getProperty("\\screenshots"+testMethodName+".png");
+		FileUtils.copyFile(source, new File(destinationFile));
+		
+	}
+	
 	
 }

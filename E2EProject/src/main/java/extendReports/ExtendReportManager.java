@@ -1,5 +1,7 @@
 package extendReports;
 
+import java.util.Date;
+
 import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -9,15 +11,20 @@ import E2EProject.BrowseOpen;
 
 public class ExtendReportManager  extends BrowseOpen {
 
-	 public static final ExtentReports extentReports = new ExtentReports();
-	 @BeforeTest
-	    public synchronized static ExtentReports createExtentReports() {
-	        ExtentSparkReporter reporter = new ExtentSparkReporter("./extent-reports/extent-report.html");
-	        reporter.config().setReportName("Sample Extent Report");
-	        extentReports.attachReporter(reporter);
-	        extentReports.setSystemInfo("Blog Name", "SW Test Academy");
-	        extentReports.setSystemInfo("Author", "Onur Baskirt");
-	        return extentReports;
-	    }
-	}
+	@BeforeTest
+	public void startup() {
+		    
+	        // create ExtentReports and attach reporter(s)
+		Date dd=new Date();
+	String cdate = dd.toString().replace(" ","").replace(":", "_");
 
+	
+		  htmlReporter = new ExtentSparkReporter(".//extentreport//"+cdate+".html");
+
+	         extent = new ExtentReports();
+	        extent.attachReporter(htmlReporter);
+	        htmlReporter.config().setReportName("Automation Results");
+	        htmlReporter.config().setDocumentTitle("Test Results");
+	        extent.setSystemInfo("Tester", "Vasanth");
+
+}}

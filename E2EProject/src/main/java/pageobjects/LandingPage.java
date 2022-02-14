@@ -28,19 +28,21 @@ public class LandingPage extends BrowseOpen {
 	List<WebElement> listofG;
 	@FindBy(id = "datepicker1")
 	WebElement DOJ;
+	@FindBy(id = "datepicker2")
+	WebElement DOR;
 	@FindBy(xpath = "(//div[@class='ui-datepicker-title']//span[@class='ui-datepicker-month'])[1]")
 	WebElement month;
 	@FindBy(xpath = "//a[@class='ui-datepicker-next ui-corner-all']/span")
 	WebElement Next;
-	@FindBy(tagName="tr")
+	@FindBy(xpath = "//div[@class='ui-datepicker-group ui-datepicker-group-first']//tr")
 	List<WebElement> trElements;
-	@FindBy(tagName="td")
+	@FindBy(xpath ="//div[@class='ui-datepicker-group ui-datepicker-group-first']//td")
 	List<WebElement> tdElements;
-	@FindBy(linkText   ="Search")
+	@FindBy(xpath    ="//div[@class='col-md-auto']//a[contains(text(),'Search')]")
 	WebElement search;
 
 	public LandingPage(WebDriver driver) {
-		this.driver = driver;
+		BrowseOpen.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -81,17 +83,84 @@ public class LandingPage extends BrowseOpen {
 					break;
 				
 				}
-				if (seleniumdate.contains(date)) {
-					break;
-				}
+				
+				
 			}
 				
 		}
 	//--------------------------------------------------------------------
+	//-----------Date of return---------------------------
 	//-----------search code-------------------------
 		search.click();
-		//----------verification point----------------------
 		
+	}
+//-------------------------------------------------------
+//-------------both from date DOJ and DOR ----------------------------------
+		public void Login(String Source ,String Dest,String date,String returndate)  {
+			//---Leaving from code----------------------------------------
+			Leaving.clear();
+			Leaving.sendKeys(Source);
+			for (int i = 0; i < listofL.size(); i++) {
+				if(listofL.get(i).getText().contains(Source)) {
+				listofL.get(i).click();
+			}}
+			//-------------------------------------------------------------
+			//-----------------Going to code---------------------------------
+			Going.clear();
+
+			Going.sendKeys(Dest);
+
+			for (int i = 0; i < listofG.size(); i++) {
+				if(listofG.get(i).getText().contains(Dest)) {
+				listofG.get(i).click();
+			}}
+			//-------------------------------------------------------------------------
+			//----------------Date code--------------------------------------------
+			DOJ.click();
+			/*	String seleniumMonth = month.getText().trim();
+			System.out.println(seleniumMonth);
+
+			while(!seleniumMonth.contains(Month)) {
+				Next.click(); 
+				seleniumMonth = month.getText();
+					}
+					*/
+			for (int i = 1; i < trElements.size(); i++) {
+				for (int j = 0; j < tdElements.size(); j++) {
+					String seleniumdate = tdElements.get(j).getText();
+					if (seleniumdate.contains(date)) {
+						tdElements.get(j).click();
+						break;
+					
+					}
+					if (seleniumdate.contains(date)) {
+						break;
+					}
+				}
+					
+			}
+		//--------------------------------------------------------------------
+		//-----------Date of return---------------------------
+			DOR.click();
+			for (int i = 1; i < trElements.size(); i++) {
+				for (int j = 0; j < tdElements.size(); j++) {
+					String seleniumdate = tdElements.get(j).getText();
+					if (seleniumdate.contains(returndate)) {
+						tdElements.get(j).click();
+						break;
+					
+					}
+					if (seleniumdate.contains(returndate)) {
+						break;
+					}
+				}
+					
+			}
+		//-----------search code-------------------------
+			search.click();
+			//----------verification point----------------------
+			
+			
 		
 }
 
