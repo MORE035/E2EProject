@@ -2,6 +2,8 @@ package e2EProject;
 
 import org.testng.annotations.*;
 
+import com.relevantcodes.extentreports.LogStatus;
+
 import E2EProject.BrowseOpen;
 import pageobjects.AfterSearchPage;
 import pageobjects.LandingPage;
@@ -13,10 +15,10 @@ import pageobjects.LandingPage;
 
 public class FilterSearchTestCase extends BrowseOpen {
 
-	@Test(priority = 2)
+	@Test()
 public void BusCount() {
-		
-		extent.createTest("Filter Test cases");
+		test=report.startTest("FilterSearchTestCase");
+
 		LandingPage lp = new LandingPage(driver);
 
 		lp.Login("Bapatla", "Hyderabad", "20");
@@ -26,7 +28,8 @@ public void BusCount() {
 	as.ACBusCount();
 	as.SleeperBusCount();
 	as.SeaterBusCount();
-	extent.flush();
-	
+	test.log(LogStatus.INFO, "test end");
+
+
 }
 }

@@ -26,7 +26,7 @@ public class AfterSearchPage  extends BrowseOpen{
 	@FindBy(id = "Bustypes4")
 	WebElement sleeper;
 	public AfterSearchPage(WebDriver driver) {
-		BrowseOpen.driver = driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}

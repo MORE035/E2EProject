@@ -42,7 +42,7 @@ public class LandingPage extends BrowseOpen {
 	WebElement search;
 
 	public LandingPage(WebDriver driver) {
-		BrowseOpen.driver = driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
