@@ -39,6 +39,7 @@ public class HomePageTestCase extends BrowseOpen
 
 		AfterSearchPage as=new AfterSearchPage(driver);
 		Assert.assertTrue(as.verification());
+
 		test.log(LogStatus.INFO, "test end");
 		report.flush();
 

@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test1(failed)">
-    <classes>
-      <class name="e2EProject.FilterSearchTestCase">
-        <methods>
-          <include name="BusCount"/>
-          <include name="open"/>
-          <include name="flashout"/>
-          <include name="getbrowser"/>
-          <include name="startup"/>
-        </methods>
-      </class> <!-- e2EProject.FilterSearchTestCase -->
-    </classes>
-  </test> <!-- Test1(failed) -->
+  <listeners>
+    <listener class-name="listners.ITestListners"/>
+  </listeners>
   <test thread-count="5" name="Test2(failed)">
     <classes>
       <class name="e2EProject.HomePageTestCase">
@@ -21,7 +11,6 @@
           <include name="open"/>
           <include name="pageinvok"/>
           <include name="flashout"/>
-          <include name="getbrowser"/>
           <include name="startup"/>
         </methods>
       </class> <!-- e2EProject.HomePageTestCase -->
